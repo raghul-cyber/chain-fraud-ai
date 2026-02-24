@@ -1,68 +1,64 @@
 # ChainShield AI – Fraud Intelligence Platform v2.1
+**Institutional-Grade Real-Time SCF Risk Intelligence & Pre-Disbursement Decision Engine**
 
-ChainShield AI is a production-grade, ultra-modern fintech platform designed for real-time supply chain fraud detection. It combines advanced network graph analysis, behavioral anomaly detection, and cascade risk simulation to provide enterprise-level intelligence for multi-tier supply chains.
+ChainShield AI is a production-grade, multi-tier Supply Chain Finance (SCF) fraud detection platform. Version 2.1 elevates the system to an enterprise-grade engine with automated three-way matching, temporal velocity analysis, and graph-based systemic risk modeling.
 
-## 🚀 Tech Stack
+## 🚀 Enterprise v2.1 Capabilities
 
-- **Structure**: Semantic HTML5 with a focus on accessibility.
-- **Styling**: Vanilla CSS3 with advanced Glassmorphism effects, Aurora background animations, and custom CSS variables.
-- **Frontend Logic**: Vanilla JavaScript (ES6+) for state management and UI reactivity.
-- **Visualizations**: 
-  - **D3.js**: Used for the Force-Directed Network Graph and interactive charts (Heatmaps, Distribution Bars).
-- **Data Handling**: 
-  - **PapaParse**: High-performance CSV parsing.
-  - **D3.js Fetch**: JSON dataset loading.
-- **Algorithms**: Custom-built modular fraud detection engine.
+### 1. PO–GRN–Invoice Reconciliation
+Automated three-way match engine that simulates ERP integration to validate invoices against Purchase Orders and Goods Received Notes. Detects over-billing and short-supply anomalies with a 5% tolerance threshold.
 
-## 🧠 Fraud Detection Algorithms
+### 2. Temporal Velocity & Sequencing
+Identifies sophisticated fraud patterns by detecting rolling 7-day frequency spikes and calculating Z-score deviations for invoice amounts and inter-arrival times.
 
-The platform implements 7 core fraud detection algorithms within the `FraudEngine`:
+### 3. Pre-Disbursement Composite Decision Engine
+A high-performance weighted scoring matrix that aggregates 10+ risk modules into a final decision:
+- **[AUTO HOLD]**: Risk > 75
+- **[MANUAL REVIEW]**: Risk 50–75
+- **[APPROVED]**: Risk < 50
 
-1. **Behavioral Anomaly Score**: Simulates an Isolation Forest algorithm by analyzing frequency and amount deviations from historical supplier patterns.
-2. **Revenue Feasibility Score**: Validates if invoice volumes exceed a supplier's annual revenue or production capacity.
-3. **Duplicate Invoice Detection**: Uses SHA-256 fingerprinting to identify invoices reused across different lenders or PO IDs.
-4. **Dilution Risk**: Analyzes the ratio of actual payments vs. expected payments to detect shortfall risks.
-5. **Circular Trade Detection**: Uses Depth-First Search (DFS) to find cycles in the supply chain graph (e.g., Supplier A -> Buyer B -> Supplier C -> Supplier A).
-6. **Carousel Fraud Analysis**: Identifies inflated trade volumes within detected cycles, common in VAT fraud.
-7. **Cascade Risk Simulation (FAI)**: Calculates the **Fraud Amplification Index** by modeling how a failure at one node affects upstream, downstream, and lender exposures.
+### 4. Graph Centrality & Systemic Impact
+Utilizes D3-based network analysis to identify "Too Big to Fail" nodes. High-centrality nodes are visually highlighted with a **Cyan Glow effect**, indicating systemic exposure risks within the supply chain.
+
+### 5. Fraud DNA Behavioral Fingerprinting
+Creates unique supplier behavioral "DNA" vectors. The system detects "Behavioral Drift" by comparing current invoice profiles against historical fingerprints (amount, frequency, counterparty diversity, payment delay ratio).
+
+## 🧠 Core Detection Stack
+
+1. **Behavioral Anomaly**: Isolation Forest simulation for frequency/amount deviations.
+2. **Revenue Feasibility**: Monthly volume vs. Annual Revenue stress testing.
+3. **Duplicate Detection**: Cross-lender SHA-256 invoice fingerprinting.
+4. **Dilution Risk**: Payment shortfall analysis.
+5. **Circular Trade**: DFS-based cycle detection for carousel fraud.
+6. **Cascade Simulation**: Fraud Amplification Index (FAI) exposure modeling.
 
 ## 🛠 Features
 
-- **Executive Dashboard**: Real-time KPIs with animated "count-up" values and risk distributions.
-- **Network Graph**: Zoomable, interactive supply chain relationship graph with physics-based layout.
-- **Risk Simulator**: Interactive parameter tuning to model hypothetical fraud scenarios and see real-time score updates.
-- **Invoice Inspector**: Granular breakdown of individual risk components and data confidence scores.
-- **Global Command Palette**: Press `Ctrl + K` to search for invoices, suppliers, or navigate the application instantly.
-- **System Health Monitor**: Real-time visualization of ingestion rates and API performance.
+- **Executive Dashboard**: Animated enterprise KPIs and real-time risk distribution.
+- **Dynamic Network Graph**: Zoomable D3 graph with centrality visualization.
+- **Scenario Simulator**: Interactive "What-If" parameter tuning for ledger modeling.
+- **Invoice Inspector v2.1**: Granular multi-factor breakdown with Pre-Disbursement status.
+- **Model Health Monitor**: Live ML performance metrics (F1 Score, Precision, Recall).
+- **Command Palette**: `Ctrl + K` global navigation and deep-search.
 
 ## 📦 Installation & Setup
 
 > [!IMPORTANT]
-> Because the browser cannot load local files (CSV/JSON) directly via the `file://` protocol due to security (CORS), you **must** use a local web server.
+> A local web server is required due to browser CORS policies for CSV/JSON loading.
 
-### Option 1: Using Node.js (Recommended)
-1. Ensure you have Node.js installed.
-2. Run the following command in the project root:
+1. **Install Node.js** (if not present).
+2. **Run Server**:
    ```bash
    npx serve . -p 5500
    ```
-3. Open [http://localhost:5500](http://localhost:5500) in your browser.
+3. **Open**: [http://localhost:5500](http://localhost:5500)
 
-### Option 2: VS Code Live Server
-1. Search for "Live Server" in the VS Code Extensions Marketplace.
-2. Right-click `index.html` and select "**Open with Live Server**".
+## 📂 Modular Architecture
 
-## 📂 Project Structure
+- `engine/fraudEngine.js`: Main engine orchestrating all modules.
+- `engine/modules/`: Contains specialized logic for ERP integration, Reconciliation, Velocity, Graph Centrality, and DNA Fingerprinting.
+- `main.js`: Real-time UI synchronization and App State management.
+- `data/`: High-fidelity 1006-record synthetic dataset (Invoices, Suppliers, Payments, Graph).
 
-- `index.html`: Main application entry point and UI structure.
-- `main.js`: Application bootstrap, UI rendering, and interactivity.
-- `styles.css`: Enterprise dark fintech theme and visual effects.
-- `engine/fraudEngine.js`: Core algorithmic engine for risk calculation.
-- `data/`: Contains CSV and JSON datasets for simulation.
-
-## 📜 Usage Guide
-
-1. **Monitor Health**: Check the top right corner for ingestion status.
-2. **Explore Graph**: Click on the 'Network Graph' tab to visualize supplier relationships.
-3. **Simulate Scenarios**: Use the 'Simulation' tab to test how changing invoice amounts or frequencies impacts the risk score.
-4. **Quick Navigation**: Use `Ctrl + K` to jump between views or search for specific Invoice IDs.
+---
+*ChainShield AI v2.1 - Securing the Global Supply Chain.*
