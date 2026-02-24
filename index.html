@@ -7,584 +7,406 @@
   <title>ChainShield AI – Real-Time Supply Chain Fraud Intelligence</title>
   <meta name="description"
     content="Production-grade AI fintech platform for multi-tier supply chain fraud detection. Real-time anomaly scoring, cascade risk simulation, and graph-based circular trade detection." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap"
     rel="stylesheet" />
-  <!-- D3.js for graph visualization -->
-  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-  <!-- PapaParse for CSV loading -->
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
   <link rel="stylesheet" href="styles.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 </head>
 
 <body>
-
-  <!-- ═══════════════════════════════════════
-     TOP NAVIGATION
-═══════════════════════════════════════ -->
-  <nav id="topnav">
-    <div class="nav-left">
-      <div class="logo">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-          <polygon points="16,2 30,9 30,23 16,30 2,23 2,9" stroke="#22D3EE" stroke-width="1.5" fill="none" />
-          <polygon points="16,8 24,12 24,20 16,24 8,20 8,12" stroke="#2563EB" stroke-width="1.5"
-            fill="rgba(37,99,235,0.25)" />
-          <circle cx="16" cy="16" r="3.5" fill="#22D3EE" />
-        </svg>
-        <div class="logo-text">
-          <span class="logo-name">ChainShield <span class="logo-ai">AI</span></span>
-          <span class="logo-sub">Fraud Intelligence Platform v2.0</span>
-        </div>
-      </div>
-    </div>
-    <div class="nav-center">
-      <div class="nav-tabs">
-        <button class="nav-tab active" data-view="dashboard" id="tab-dashboard">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-            <rect x="1" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5" />
-            <rect x="9" y="1" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5" />
-            <rect x="1" y="9" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5" />
-            <rect x="9" y="9" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.5" />
-          </svg>
-          Dashboard
-        </button>
-        <button class="nav-tab" data-view="graph" id="tab-graph">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-            <circle cx="8" cy="3" r="2" stroke="currentColor" stroke-width="1.5" />
-            <circle cx="3" cy="13" r="2" stroke="currentColor" stroke-width="1.5" />
-            <circle cx="13" cy="13" r="2" stroke="currentColor" stroke-width="1.5" />
-            <line x1="8" y1="5" x2="3" y2="11" stroke="currentColor" stroke-width="1.5" />
-            <line x1="8" y1="5" x2="13" y2="11" stroke="currentColor" stroke-width="1.5" />
-            <line x1="5" y1="13" x2="11" y2="13" stroke="currentColor" stroke-width="1.5" />
-          </svg>
-          Network Graph
-        </button>
-        <button class="nav-tab" data-view="simulation" id="tab-simulation">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-            <path d="M2 8h3l2-5 3 10 2-5 2 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-              stroke-linejoin="round" />
-          </svg>
-          Simulation
-        </button>
-        <button class="nav-tab" data-view="inspector" id="tab-inspector">
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-            <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5" />
-            <line x1="11" y1="11" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-          </svg>
-          Inspector
-        </button>
-      </div>
-    </div>
-    <div class="nav-right">
-      <div class="health-monitor">
-        <div class="health-stat">
-          <span class="health-label">API Latency</span>
-          <span class="health-value" id="health-latency">12ms</span>
-        </div>
-        <div class="health-stat">
-          <span class="health-label">Ingestion</span>
-          <span class="health-value" id="health-ingest">4.2 GB/s</span>
-        </div>
-      </div>
-      <div class="live-badge">
-        <span class="live-dot"></span>
-        <span>LIVE</span>
-      </div>
-      <div class="data-status" id="dataStatus">
-        <span class="status-dot loading-dot"></span>
-        Loading datasets...
-      </div>
-    </div>
-  </nav>
-
   <!-- LOADING SCREEN -->
   <div id="loadingScreen">
     <div class="loading-content">
       <div class="loading-logo">
-        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-          <polygon points="28,4 52,16 52,40 28,52 4,40 4,16" stroke="#22D3EE" stroke-width="2" fill="none"
-            class="logo-hex-outer" />
-          <polygon points="28,14 42,21 42,35 28,42 14,35 14,21" stroke="#2563EB" stroke-width="2"
-            fill="rgba(37,99,235,0.2)" />
-          <circle cx="28" cy="28" r="6" fill="#22D3EE" />
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+          <path class="logo-hex-outer" d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="#22D3EE" stroke-width="2" />
+          <path d="M32 16L46 24V40L32 48L18 40V24L32 16Z" fill="#2563EB" fill-opacity="0.2" stroke="#2563EB"
+            stroke-width="2" />
+          <circle cx="32" cy="32" r="4" fill="#22D3EE" />
         </svg>
       </div>
-      <h2>ChainShield AI</h2>
-      <p>Loading fraud intelligence datasets...</p>
+      <h2>ChainShield <span class="logo-ai">AI</span></h2>
+      <p>Initializing Fraud Intelligence v2.1...</p>
       <div class="loading-bar-wrap">
-        <div class="loading-bar" id="loadingBar"></div>
+        <div id="loadingBar" class="loading-bar"></div>
       </div>
-      <div class="loading-steps" id="loadingSteps">
-        <span class="step-item" id="step1">⏳ Loading invoice data...</span>
-        <span class="step-item" id="step2">⏳ Loading supplier profiles...</span>
-        <span class="step-item" id="step3">⏳ Loading payment data...</span>
-        <span class="step-item" id="step4">⏳ Building transaction graph...</span>
-        <span class="step-item" id="step5">⏳ Running fraud detection engine...</span>
+      <div class="loading-steps">
+        <div id="step1" class="step-item">⚡ Loading Invoice Ledger</div>
+        <div id="step2" class="step-item">⚡ Syncing Supplier Profiles</div>
+        <div id="step3" class="step-item">⚡ Fetching Payment History</div>
+        <div id="step4" class="step-item">⚡ Building Transaction Graph</div>
+        <div id="step5" class="step-item">⚡ Running Fraud Engine Core</div>
       </div>
     </div>
   </div>
 
-  <!-- ═══════════════════════════════════════
-     MAIN APPLICATION
-═══════════════════════════════════════ -->
+  <!-- APP CONTAINER -->
   <div id="appContainer" class="hidden">
+    <!-- TOP NAVIGATION -->
+    <nav id="topnav">
+      <div class="nav-left">
+        <div class="logo">
+          <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+            <path d="M32 4L58 18V46L32 60L6 46V18L32 4Z" stroke="#22D3EE" stroke-width="3" />
+            <circle cx="32" cy="32" r="8" fill="#2563EB" />
+          </svg>
+          <div class="logo-text">
+            <span class="logo-name">ChainShield <span class="logo-ai">AI</span></span>
+            <span class="logo-sub">ENTERPRISE v2.1</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- KPI HERO BAR -->
+      <div class="nav-center">
+        <div class="nav-tabs">
+          <button class="nav-tab active" id="tab-dashboard" data-view="dashboard">Dashboard</button>
+          <button class="nav-tab" id="tab-graph" data-view="graph">Network Graph</button>
+          <button class="nav-tab" id="tab-simulation" data-view="simulation">Risk Simulator</button>
+          <button class="nav-tab" id="tab-inspector" data-view="inspector">Inspector</button>
+        </div>
+      </div>
+
+      <div class="nav-right">
+        <div class="health-monitor">
+          <div class="health-stat">
+            <span class="health-label">Accuracy</span>
+            <span id="model-f1" class="health-value">—</span>
+          </div>
+          <div class="health-stat">
+            <span class="health-label">Precision</span>
+            <span id="model-precision" class="health-value">—</span>
+          </div>
+          <div class="health-stat">
+            <span class="health-label">Recall</span>
+            <span id="model-recall" class="health-value">—</span>
+          </div>
+        </div>
+        <div class="data-status" id="dataStatus">
+          <span class="status-dot ready-dot"></span> System Ready
+        </div>
+      </div>
+    </nav>
+
+    <!-- KPI BANNER -->
     <section id="kpiBanner">
       <div class="kpi-cards">
         <div class="kpi-card">
-          <div class="kpi-icon blue-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M3 17V7l7-4 7 4v10" stroke="#2563EB" stroke-width="1.5" />
-              <rect x="7" y="11" width="6" height="6" stroke="#2563EB" stroke-width="1.5" />
-            </svg>
-          </div>
+          <div class="kpi-icon blue-icon">📊</div>
           <div class="kpi-content">
-            <div class="kpi-value" id="kpi-total">—</div>
+            <div id="kpi-total" class="kpi-value">—</div>
             <div class="kpi-label">Total Invoices</div>
           </div>
-          <div class="kpi-trend up">↑ 12.4%</div>
         </div>
         <div class="kpi-card alert-card">
-          <div class="kpi-icon red-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 3L2 17h16L10 3z" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round" />
-              <line x1="10" y1="9" x2="10" y2="13" stroke="#EF4444" stroke-width="1.5" />
-              <circle cx="10" cy="15.5" r="0.5" fill="#EF4444" stroke="#EF4444" />
-            </svg>
-          </div>
+          <div class="kpi-icon red-icon">🚨</div>
           <div class="kpi-content">
-            <div class="kpi-value danger-val" id="kpi-alerts">—</div>
+            <div id="kpi-alerts" class="kpi-value danger-val">—</div>
             <div class="kpi-label">Fraud Alerts</div>
           </div>
           <div class="kpi-badge-row"><span class="kpi-badge red-badge" id="kpi-fraud-rate">—</span></div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon cyan-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="10" r="7" stroke="#22D3EE" stroke-width="1.5" />
-              <path d="M10 6v4l3 3" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round" />
-            </svg>
-          </div>
+          <div class="kpi-icon cyan-icon">🎯</div>
           <div class="kpi-content">
-            <div class="kpi-value" id="kpi-avg-risk">—</div>
+            <div id="kpi-avg-risk" class="kpi-value">—</div>
             <div class="kpi-label">Avg Risk Score</div>
           </div>
           <div class="risk-mini-bar">
-            <div class="risk-mini-fill" id="kpiRiskFill"></div>
+            <div id="kpiRiskFill" class="risk-mini-fill"></div>
           </div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon orange-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M10 2C5.6 2 2 5.6 2 10s3.6 8 8 8 8-3.6 8-8" stroke="#F59E0B" stroke-width="1.5" />
-              <path d="M14 2l4 4-4 4" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
+          <div class="kpi-icon yellow-icon">🔍</div>
           <div class="kpi-content">
-            <div class="kpi-value" id="kpi-cascade">—</div>
-            <div class="kpi-label">Cascade Risks</div>
+            <div id="kpi-recon" class="kpi-value">—</div>
+            <div class="kpi-label">Recon Confidence</div>
           </div>
-          <div class="kpi-trend down">FAI > 3.0</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon green-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <path d="M4 10l4 4 8-8" stroke="#22C55E" stroke-width="1.5" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </div>
+          <div class="kpi-icon orange-icon">⚡</div>
           <div class="kpi-content">
-            <div class="kpi-value green-val" id="kpi-approved">—</div>
-            <div class="kpi-label">Approved</div>
+            <div id="kpi-velocity" class="kpi-value">—</div>
+            <div class="kpi-label">Velocity Risks</div>
           </div>
-          <div class="kpi-trend up">Auto-cleared</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-icon yellow-icon">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <circle cx="10" cy="10" r="7" stroke="#F59E0B" stroke-width="1.5" />
-              <path d="M10 7v4" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" />
-              <circle cx="10" cy="13.5" r="0.5" fill="#F59E0B" stroke="#F59E0B" />
-            </svg>
-          </div>
+          <div class="kpi-icon purple-icon">🌐</div>
           <div class="kpi-content">
-            <div class="kpi-value yellow-val" id="kpi-review">—</div>
-            <div class="kpi-label">Manual Review</div>
+            <div id="kpi-systemic" class="kpi-value">—</div>
+            <div class="kpi-label">Systemic Risks</div>
           </div>
-          <div class="kpi-trend neutral">Risk 40–70</div>
         </div>
       </div>
     </section>
 
-    <!-- ═══ VIEW: DASHBOARD ═══ -->
-    <div id="view-dashboard" class="view active">
-      <div class="dashboard-layout">
-
-        <!-- LEFT: Supplier Risk Table -->
-        <div class="panel panel-wide">
-          <div class="panel-header">
-            <div class="panel-title">
-              <span class="panel-icon">🏭</span>
-              Supplier Risk Intelligence
-              <span class="panel-count" id="tableCount">0 records</span>
-            </div>
-            <div class="panel-actions">
-              <div class="search-box">
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <circle cx="7" cy="7" r="5" stroke="#64748B" stroke-width="1.5" />
-                  <line x1="11" y1="11" x2="14" y2="14" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-                <input type="text" id="tableSearch" placeholder="Search supplier, ID, tier..."
-                  oninput="filterTable()" />
+    <!-- VIEWS -->
+    <main id="mainContent">
+      <!-- DASHBOARD VIEW -->
+      <div class="view active" id="view-dashboard">
+        <div class="dashboard-layout">
+          <div class="panel-wide">
+            <div class="panel">
+              <div class="panel-header">
+                <div class="panel-title">Real-Time Risk Ledger <span id="tableCount" class="panel-count">—</span></div>
+                <div class="panel-actions">
+                  <input type="text" id="tableSearch" placeholder="Search by ID, Supplier..." oninput="filterTable()" />
+                  <select id="tierFilter" onchange="filterTable()">
+                    <option value="">All Tiers</option>
+                    <option value="1">Tier 1</option>
+                    <option value="2">Tier 2</option>
+                    <option value="3">Tier 3</option>
+                  </select>
+                  <select id="riskFilter" onchange="filterTable()">
+                    <option value="">All Risks</option>
+                    <option value="blocked">Blocked</option>
+                    <option value="review">Review</option>
+                    <option value="approved">Approved</option>
+                  </select>
+                </div>
               </div>
-              <select id="tierFilter" onchange="filterTable()" class="select-sm">
-                <option value="">All Tiers</option>
-                <option value="1">Tier 1</option>
-                <option value="2">Tier 2</option>
-                <option value="3">Tier 3</option>
-              </select>
-              <select id="riskFilter" onchange="filterTable()" class="select-sm">
-                <option value="">All Risk</option>
-                <option value="blocked">🔴 Blocked</option>
-                <option value="review">🟡 Review</option>
-                <option value="approved">🟢 Approved</option>
-              </select>
-            </div>
-          </div>
-          <div class="table-wrap">
-            <table id="supplierTable">
-              <thead>
-                <tr>
-                  <th class="sortable" data-col="invoice_id" onclick="sortTable('invoice_id')">Invoice ID <span
-                      class="sort-icon">↕</span></th>
-                  <th class="sortable" data-col="supplier_id" onclick="sortTable('supplier_id')">Supplier <span
-                      class="sort-icon">↕</span></th>
-                  <th class="sortable" data-col="tier_level" onclick="sortTable('tier_level')">Tier <span
-                      class="sort-icon">↕</span></th>
-                  <th class="sortable" data-col="invoice_amount" onclick="sortTable('invoice_amount')">Amount <span
-                      class="sort-icon">↕</span></th>
-                  <th class="sortable" data-col="risk_score" onclick="sortTable('risk_score')">Risk Score <span
-                      class="sort-icon">↕</span></th>
-                  <th>Decision</th>
-                  <th>Anomaly</th>
-                  <th>FAI</th>
-                  <th>Duplicate</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody id="tableBody"></tbody>
-            </table>
-          </div>
-          <div class="table-pagination">
-            <span id="paginationInfo">Showing 0–0 of 0</span>
-            <div class="page-btns">
-              <button id="prevPage" onclick="changePage(-1)">← Prev</button>
-              <span id="pageNum">1</span>
-              <button id="nextPage" onclick="changePage(1)">Next →</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: Heatmap + Stats -->
-        <div class="panel-stack">
-
-          <!-- Risk Heatmap -->
-          <div class="panel panel-compact">
-            <div class="panel-header">
-              <div class="panel-title">
-                <span class="panel-icon">🔥</span>
-                Risk Heatmap by Tier
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th class="sortable" data-col="invoice_id" onclick="sortTable('invoice_id')">Invoice ID</th>
+                      <th class="sortable" data-col="supplier_id" onclick="sortTable('supplier_id')">Supplier</th>
+                      <th>Tier</th>
+                      <th class="sortable" data-col="invoice_amount" onclick="sortTable('invoice_amount')">Amount</th>
+                      <th class="sortable sort-active" data-col="risk_score" onclick="sortTable('risk_score')">Risk
+                        Score</th>
+                      <th>Verdict</th>
+                      <th>Anomaly</th>
+                      <th>FAI</th>
+                      <th>DUP</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tableBody"></tbody>
+                </table>
+              </div>
+              <div class="panel-footer">
+                <div id="paginationInfo">Showing 0-0 of 0</div>
+                <div class="pagination-controls">
+                  <button id="prevPage" onclick="changePage(-1)">Previous</button>
+                  <span id="pageNum">1 / 1</span>
+                  <button id="nextPage" onclick="changePage(1)">Next</button>
+                </div>
               </div>
             </div>
-            <div id="heatmapContainer">
+          </div>
+
+          <div class="panel-stack">
+            <!-- HEATMAP -->
+            <div class="panel" id="heatmapContainer">
+              <div class="panel-header">
+                <div class="panel-title">Supplier Risk Distribution</div>
+              </div>
               <svg id="heatmapSvg"></svg>
             </div>
-          </div>
-
-          <!-- Distribution Chart -->
-          <div class="panel panel-compact">
-            <div class="panel-header">
-              <div class="panel-title">
-                <span class="panel-icon">📊</span>
-                Risk Score Distribution
+            <!-- DISTRIBUTION -->
+            <div class="panel" id="distChartContainer">
+              <div class="panel-header">
+                <div class="panel-title">Score Frequency</div>
               </div>
-            </div>
-            <div id="distChartContainer">
               <svg id="distChart"></svg>
             </div>
           </div>
-
         </div>
       </div>
-    </div>
 
-    <!-- ═══ VIEW: NETWORK GRAPH ═══ -->
-    <div id="view-graph" class="view">
-      <div class="panel full-panel">
-        <div class="panel-header">
-          <div class="panel-title">
-            <span class="panel-icon">🕸</span>
-            Supply Chain Network Graph
-            <span class="panel-count" id="graphNodeCount">0 nodes</span>
-          </div>
-          <div class="panel-actions">
-            <div class="graph-legend">
-              <span class="legend-item"><span class="legend-dot supplier-dot"></span>Supplier</span>
-              <span class="legend-item"><span class="legend-dot buyer-dot"></span>Buyer</span>
-              <span class="legend-item"><span class="legend-dot lender-dot"></span>Lender</span>
-              <span class="legend-item"><span class="legend-dot fraud-dot"></span>High Risk</span>
-              <span class="legend-item"><span class="legend-dot cycle-dot"></span>Cycle</span>
-            </div>
-            <button class="btn-sm" onclick="resetGraphZoom()">Reset View</button>
-            <button class="btn-sm" onclick="toggleGraphPhysics()">Toggle Physics</button>
-          </div>
-        </div>
-        <div id="graphContainer">
-          <svg id="networkGraph"></svg>
-          <div id="graphTooltip" class="graph-tooltip hidden"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══ VIEW: SIMULATION ═══ -->
-    <div id="view-simulation" class="view">
-      <div class="sim-layout">
-        <div class="panel sim-inputs-panel">
+      <!-- GRAPH VIEW -->
+      <div class="view" id="view-graph">
+        <div class="panel full-panel" id="graphContainer">
           <div class="panel-header">
-            <div class="panel-title">
-              <span class="panel-icon">⚙️</span>
-              Simulation Parameters
-            </div>
-            <button class="btn-reset" onclick="resetSimulation()">Reset</button>
-          </div>
-          <div class="sim-section">
-            <h4 class="sim-section-title">Invoice Parameters</h4>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Invoice Amount</span>
-                <span class="sim-val" id="sim-amt-val">₹10,00,000</span>
-              </div>
-              <input type="range" id="sim-amt" min="100000" max="50000000" step="100000" value="1000000"
-                oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>₹1L</span><span>₹5Cr</span></div>
-            </div>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Invoice Frequency (per month)</span>
-                <span class="sim-val" id="sim-freq-val">5</span>
-              </div>
-              <input type="range" id="sim-freq" min="1" max="150" value="5" oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>1</span><span>150</span></div>
-            </div>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Units Supplied</span>
-                <span class="sim-val" id="sim-units-val">500</span>
-              </div>
-              <input type="range" id="sim-units" min="100" max="100000" step="100" value="500"
-                oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>100</span><span>100K</span></div>
-            </div>
-          </div>
-          <div class="sim-section">
-            <h4 class="sim-section-title">Supplier Context</h4>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Annual Revenue</span>
-                <span class="sim-val" id="sim-rev-val">₹5Cr</span>
-              </div>
-              <input type="range" id="sim-rev" min="1000000" max="500000000" step="1000000" value="50000000"
-                oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>₹10L</span><span>₹50Cr</span></div>
-            </div>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Production Capacity (units/mo)</span>
-                <span class="sim-val" id="sim-cap-val">10,000</span>
-              </div>
-              <input type="range" id="sim-cap" min="500" max="100000" step="500" value="10000"
-                oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>500</span><span>100K</span></div>
-            </div>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Historical Avg Frequency</span>
-                <span class="sim-val" id="sim-hist-val">5</span>
-              </div>
-              <input type="range" id="sim-hist" min="1" max="50" value="5" oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>1</span><span>50</span></div>
-            </div>
-          </div>
-          <div class="sim-section">
-            <h4 class="sim-section-title">Payment Behavior</h4>
-            <div class="sim-slider-group">
-              <div class="sim-label">
-                <span>Payment Ratio (Actual / Expected)</span>
-                <span class="sim-val" id="sim-pay-val">95%</span>
-              </div>
-              <input type="range" id="sim-pay" min="20" max="100" value="95" oninput="runSimulation()" />
-              <div class="sim-range-labels"><span>20%</span><span>100%</span></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="sim-outputs-panel">
-          <!-- Verdict card -->
-          <div class="verdict-card" id="simVerdict">
-            <div class="verdict-ring" id="simVerdictRing">
-              <svg viewBox="0 0 120 120" id="simRingSvg">
-                <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="10" />
-                <circle cx="60" cy="60" r="50" fill="none" stroke="#2563EB" stroke-width="10" stroke-dasharray="314"
-                  stroke-dashoffset="314" stroke-linecap="round" transform="rotate(-90 60 60)" id="simRingFill"
-                  class="ring-transition" />
-              </svg>
-              <div class="verdict-score-center">
-                <span id="simRiskScore">0</span>
-                <span class="verdict-score-label">Risk Score</span>
-              </div>
-            </div>
-            <div class="verdict-decision" id="simDecision">
-              <span class="decision-icon" id="simDecIcon">—</span>
-              <span class="decision-text" id="simDecText">Calculating...</span>
-            </div>
-          </div>
-
-          <!-- Component breakdown -->
-          <div class="panel sim-breakdown">
-            <div class="panel-header">
-              <div class="panel-title"><span class="panel-icon">🔍</span> Score Breakdown</div>
-            </div>
-            <div class="breakdown-items" id="simBreakdown">
-              <div class="breakdown-item">
-                <span class="breakdown-label">Behavioral Anomaly <span class="bk-weight">(25%)</span></span>
-                <div class="breakdown-bar-track">
-                  <div class="breakdown-bar" id="bk-anomaly" style="width:0%"></div>
-                </div>
-                <span class="breakdown-val" id="bk-anomaly-val">0</span>
-              </div>
-              <div class="breakdown-item">
-                <span class="breakdown-label">Revenue Feasibility <span class="bk-weight">(15%)</span></span>
-                <div class="breakdown-bar-track">
-                  <div class="breakdown-bar" id="bk-revenue" style="width:0%"></div>
-                </div>
-                <span class="breakdown-val" id="bk-revenue-val">0</span>
-              </div>
-              <div class="breakdown-item">
-                <span class="breakdown-label">Dilution Risk <span class="bk-weight">(15%)</span></span>
-                <div class="breakdown-bar-track">
-                  <div class="breakdown-bar" id="bk-dilution" style="width:0%"></div>
-                </div>
-                <span class="breakdown-val" id="bk-dilution-val">0</span>
-              </div>
-              <div class="breakdown-item">
-                <span class="breakdown-label">Cascade FAI <span class="bk-weight">(15%)</span></span>
-                <div class="breakdown-bar-track">
-                  <div class="breakdown-bar" id="bk-fai" style="width:0%"></div>
-                </div>
-                <span class="breakdown-val" id="bk-fai-val">0</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Derived metrics -->
-          <div class="panel sim-metrics">
-            <div class="panel-header">
-              <div class="panel-title"><span class="panel-icon">📐</span> Derived Metrics</div>
-            </div>
-            <div class="metrics-grid" id="simMetrics">
-              <div class="metric-cell">
-                <span class="metric-label">Anomaly Score</span>
-                <span class="metric-val mono" id="met-anomaly">0.00</span>
-              </div>
-              <div class="metric-cell">
-                <span class="metric-label">FAI Index</span>
-                <span class="metric-val mono" id="met-fai">0.00</span>
-              </div>
-              <div class="metric-cell">
-                <span class="metric-label">Feasibility Score</span>
-                <span class="metric-val mono" id="met-feas">1.00</span>
-              </div>
-              <div class="metric-cell">
-                <span class="metric-label">Revenue Ratio</span>
-                <span class="metric-val mono" id="met-rev">0.00x</span>
-              </div>
-              <div class="metric-cell">
-                <span class="metric-label">Freq Deviation</span>
-                <span class="metric-val mono" id="met-freq">0.00</span>
-              </div>
-              <div class="metric-cell">
-                <span class="metric-label">Dilution Risk</span>
-                <span class="metric-val mono" id="met-dil">Low</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ═══ VIEW: INSPECTOR ═══ -->
-    <div id="view-inspector" class="view">
-      <div class="inspector-layout">
-        <div class="panel inspector-list-panel">
-          <div class="panel-header">
-            <div class="panel-title">
-              <span class="panel-icon">📋</span>
-              Invoice Queue
+            <div class="panel-title">Dynamic Transaction Graph <span id="graphNodeCount" class="panel-count">—</span>
             </div>
             <div class="panel-actions">
-              <select id="insp-filter" onchange="filterInspectorList()" class="select-sm">
-                <option value="">All Status</option>
-                <option value="blocked">Blocked Only</option>
-                <option value="review">Review Only</option>
-                <option value="approved">Approved Only</option>
-              </select>
+              <button onclick="resetGraphZoom()">Reset Zoom</button>
+              <button onclick="toggleGraphPhysics()">Toggle Physics</button>
             </div>
           </div>
-          <div class="inspector-list" id="inspectorList"></div>
+          <svg id="networkGraph"></svg>
+          <div id="graphTooltip" class="graph-tooltip"></div>
         </div>
-        <div class="inspector-detail-panel" id="inspectorDetail">
-          <div class="inspector-placeholder">
-            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-              <circle cx="22" cy="22" r="16" stroke="#334155" stroke-width="2" />
-              <line x1="33" y1="33" x2="42" y2="42" stroke="#334155" stroke-width="2" stroke-linecap="round" />
-            </svg>
-            <p>Select an invoice to inspect all calculated fraud risk scores</p>
+      </div>
+
+      <!-- SIMULATION VIEW -->
+      <div class="view" id="view-simulation">
+        <!-- Replaced dynamically or static fallback -->
+        <script>
+          window.addEventListener('load', () => {
+            if (!window.FraudEngine || !window.FraudEngine.prototype.simulateRiskScore) {
+              document.getElementById('view-simulation').innerHTML = '<div class="error-view"><h1>Simulation Engine Disabled</h1><p>Institutional-grade backend required for real-time scenario modeling.</p></div>';
+            }
+          });
+        </script>
+
+        <div class="dashboard-layout simulation-grid">
+          <div class="panel-stack">
+            <div class="panel">
+              <div class="panel-header">
+                <div class="panel-title">Scenario Parameters</div>
+              </div>
+              <div class="sim-controls">
+                <div class="ctrl-group">
+                  <label>Invoice Amount <span id="sim-amt-val"></span></label>
+                  <input type="range" id="sim-amt" min="10000" max="10000000" step="10000" oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Monthly Frequency <span id="sim-freq-val"></span></label>
+                  <input type="range" id="sim-freq" min="1" max="50" step="1" oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Units Supplied <span id="sim-units-val"></span></label>
+                  <input type="range" id="sim-units" min="10" max="20000" step="10" oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Annual Revenue <span id="sim-rev-val"></span></label>
+                  <input type="range" id="sim-rev" min="1000000" max="500000000" step="1000000"
+                    oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Monthly Capacity <span id="sim-cap-val"></span></label>
+                  <input type="range" id="sim-cap" min="100" max="50000" step="100" oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Historical Frequency <span id="sim-hist-val"></span></label>
+                  <input type="range" id="sim-hist" min="1" max="50" step="1" oninput="runSimulation()" />
+                </div>
+                <div class="ctrl-group">
+                  <label>Payment Ratio <span id="sim-pay-val"></span></label>
+                  <input type="range" id="sim-pay" min="50" max="100" step="1" oninput="runSimulation()" />
+                </div>
+                <button onclick="resetSimulation()" class="btn-reset">Reset Parameters</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-stack">
+            <div class="panel sim-result-panel">
+              <div class="panel-header">
+                <div class="panel-title">Projected Risk Output</div>
+              </div>
+              <div class="sim-result-content">
+                <div class="sim-total-risk">
+                  <svg width="120" height="120">
+                    <circle cx="60" cy="60" r="50" stroke="rgba(255,255,255,0.05)" stroke-width="8" fill="none" />
+                    <circle id="simRingFill" cx="60" cy="60" r="50" stroke="var(--primary)" stroke-width="8" fill="none"
+                      transform="rotate(-90 60 60)" style="transition: stroke-dashoffset 0.5s ease" />
+                  </svg>
+                  <div id="simRiskScore" class="sim-score-val">0</div>
+                </div>
+                <div class="sim-verdict-box">
+                  <div id="simDecIcon" class="sim-dec-icon"></div>
+                  <div id="simDecText" class="sim-dec-text">—</div>
+                </div>
+              </div>
+
+              <div class="sim-breakdown">
+                <div class="breakdown-row">
+                  <span>Behavioral Drift</span>
+                  <div class="breakdown-bar">
+                    <div id="bk-anomaly" class="breakdown-fill"></div>
+                  </div>
+                  <span id="bk-anomaly-val">0</span>
+                </div>
+                <div class="breakdown-row">
+                  <span>Revenue Stress</span>
+                  <div class="breakdown-bar">
+                    <div id="bk-revenue" class="breakdown-fill"></div>
+                  </div>
+                  <span id="bk-revenue-val">0</span>
+                </div>
+                <div class="breakdown-row">
+                  <span>Dilution Factor</span>
+                  <div class="breakdown-bar">
+                    <div id="bk-dilution" class="breakdown-fill"></div>
+                  </div>
+                  <span id="bk-dilution-val">0</span>
+                </div>
+                <div class="breakdown-row">
+                  <span>Cascade Impact</span>
+                  <div class="breakdown-bar">
+                    <div id="bk-fai" class="breakdown-fill"></div>
+                  </div>
+                  <span id="bk-fai-val">0</span>
+                </div>
+              </div>
+
+              <div class="sim-metrics">
+                <div class="metric-box"><span>Anomaly</span>
+                  <div id="met-anomaly">0</div>
+                </div>
+                <div class="metric-box"><span>FAI</span>
+                  <div id="met-fai">0</div>
+                </div>
+                <div class="metric-box"><span>Feasibility</span>
+                  <div id="met-feas">0</div>
+                </div>
+                <div class="metric-box"><span>Rev Ratio</span>
+                  <div id="met-rev">0</div>
+                </div>
+                <div class="metric-box"><span>Freq Dev</span>
+                  <div id="met-freq">0</div>
+                </div>
+                <div class="metric-box"><span>Dilution</span>
+                  <div id="met-dil">0</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-  </div> <!-- /appContainer -->
+      <!-- INSPECTOR VIEW -->
+      <div class="view" id="view-inspector">
+        <div class="inspector-layout">
+          <div class="inspector-sidebar">
+            <div class="sidebar-header">
+              <select id="insp-filter" onchange="filterInspectorList()">
+                <option value="">All Alerts</option>
+                <option value="blocked">Blocked</option>
+                <option value="review">Review</option>
+                <option value="approved">Approved</option>
+              </select>
+            </div>
+            <div id="inspectorList" class="inspector-list"></div>
+          </div>
+          <div class="inspector-detail-panel">
+            <div id="inspectorDetail" class="inspector-detail-content">
+              <div class="placeholder-msg">Select an invoice to inspect its fraud DNA</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  <!-- Command Palette Modal -->
-  <div id="commandPalette">
-    <div class="palette-box">
-      <div class="palette-input-wrap">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-3)" stroke-width="2">
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
-        <input type="text" class="palette-input" id="paletteInput"
-          placeholder="Search invoices, suppliers, or commands..." autocomplete="off">
-      </div>
-      <div class="palette-results" id="paletteResults">
-        <!-- Results injected here -->
-      </div>
-      <div class="palette-footer">
-        <span><span class="kbd">↑↓</span> to navigate</span>
-        <span><span class="kbd">Enter</span> to select</span>
-        <span><span class="kbd">Esc</span> to dismiss</span>
+    <!-- COMMAND PALETTE -->
+    <div id="commandPalette" class="palette-overlay">
+      <div class="palette-box">
+        <div class="palette-search">
+          <input type="text" id="paletteInput" placeholder="Type a command or search invoice ID... (Ctrl+K)" />
+        </div>
+        <div id="paletteResults" class="palette-results"></div>
       </div>
     </div>
   </div>
 
   <!-- Scripts -->
+  <script src="engine/modules/erpConnector.js"></script>
+  <script src="engine/modules/reconciliationEngine.js"></script>
+  <script src="engine/modules/velocityEngine.js"></script>
+  <script src="engine/modules/graphEngine.js"></script>
+  <script src="engine/modules/dnaEngine.js"></script>
   <script src="engine/fraudEngine.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 
 </html>

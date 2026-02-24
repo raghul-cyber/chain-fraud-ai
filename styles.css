@@ -533,7 +533,12 @@ body::before {
 ═══════════════════════════════════════ */
 .view {
   display: none;
-  padding: 20px 24px;
+  padding: 24px;
+}
+
+.view.active {
+  display: block;
+  min-height: calc(100vh - 80px); /* subtract navbar height */
 }
 
 .view.active {
