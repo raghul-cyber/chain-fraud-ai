@@ -1,0 +1,2801 @@
+{
+  "nodes": [
+    {
+      "id": "SUP-001",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-001"
+    },
+    {
+      "id": "SUP-002",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-002"
+    },
+    {
+      "id": "SUP-003",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-003"
+    },
+    {
+      "id": "SUP-004",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-004"
+    },
+    {
+      "id": "SUP-005",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-005"
+    },
+    {
+      "id": "SUP-006",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-006"
+    },
+    {
+      "id": "SUP-007",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-007"
+    },
+    {
+      "id": "SUP-008",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-008"
+    },
+    {
+      "id": "SUP-009",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-009"
+    },
+    {
+      "id": "SUP-010",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-010"
+    },
+    {
+      "id": "SUP-011",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-011"
+    },
+    {
+      "id": "SUP-012",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-012"
+    },
+    {
+      "id": "SUP-013",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-013"
+    },
+    {
+      "id": "SUP-014",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-014"
+    },
+    {
+      "id": "SUP-015",
+      "type": "supplier",
+      "tier": 1,
+      "label": "SUP-015"
+    },
+    {
+      "id": "SUP-016",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-016"
+    },
+    {
+      "id": "SUP-017",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-017"
+    },
+    {
+      "id": "SUP-018",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-018"
+    },
+    {
+      "id": "SUP-019",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-019"
+    },
+    {
+      "id": "SUP-020",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-020"
+    },
+    {
+      "id": "SUP-021",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-021"
+    },
+    {
+      "id": "SUP-022",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-022"
+    },
+    {
+      "id": "SUP-023",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-023"
+    },
+    {
+      "id": "SUP-024",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-024"
+    },
+    {
+      "id": "SUP-025",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-025"
+    },
+    {
+      "id": "SUP-026",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-026"
+    },
+    {
+      "id": "SUP-027",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-027"
+    },
+    {
+      "id": "SUP-028",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-028"
+    },
+    {
+      "id": "SUP-029",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-029"
+    },
+    {
+      "id": "SUP-030",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-030"
+    },
+    {
+      "id": "SUP-031",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-031"
+    },
+    {
+      "id": "SUP-032",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-032"
+    },
+    {
+      "id": "SUP-033",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-033"
+    },
+    {
+      "id": "SUP-034",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-034"
+    },
+    {
+      "id": "SUP-035",
+      "type": "supplier",
+      "tier": 2,
+      "label": "SUP-035"
+    },
+    {
+      "id": "SUP-036",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-036"
+    },
+    {
+      "id": "SUP-037",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-037"
+    },
+    {
+      "id": "SUP-038",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-038"
+    },
+    {
+      "id": "SUP-039",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-039"
+    },
+    {
+      "id": "SUP-040",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-040"
+    },
+    {
+      "id": "SUP-041",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-041"
+    },
+    {
+      "id": "SUP-042",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-042"
+    },
+    {
+      "id": "SUP-043",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-043"
+    },
+    {
+      "id": "SUP-044",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-044"
+    },
+    {
+      "id": "SUP-045",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-045"
+    },
+    {
+      "id": "SUP-046",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-046"
+    },
+    {
+      "id": "SUP-047",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-047"
+    },
+    {
+      "id": "SUP-048",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-048"
+    },
+    {
+      "id": "SUP-049",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-049"
+    },
+    {
+      "id": "SUP-050",
+      "type": "supplier",
+      "tier": 3,
+      "label": "SUP-050"
+    },
+    {
+      "id": "BUY-001",
+      "type": "buyer",
+      "label": "BUY-001"
+    },
+    {
+      "id": "BUY-002",
+      "type": "buyer",
+      "label": "BUY-002"
+    },
+    {
+      "id": "BUY-003",
+      "type": "buyer",
+      "label": "BUY-003"
+    },
+    {
+      "id": "BUY-004",
+      "type": "buyer",
+      "label": "BUY-004"
+    },
+    {
+      "id": "BUY-005",
+      "type": "buyer",
+      "label": "BUY-005"
+    },
+    {
+      "id": "BUY-006",
+      "type": "buyer",
+      "label": "BUY-006"
+    },
+    {
+      "id": "BUY-007",
+      "type": "buyer",
+      "label": "BUY-007"
+    },
+    {
+      "id": "BUY-008",
+      "type": "buyer",
+      "label": "BUY-008"
+    },
+    {
+      "id": "BUY-009",
+      "type": "buyer",
+      "label": "BUY-009"
+    },
+    {
+      "id": "BUY-010",
+      "type": "buyer",
+      "label": "BUY-010"
+    },
+    {
+      "id": "BUY-011",
+      "type": "buyer",
+      "label": "BUY-011"
+    },
+    {
+      "id": "BUY-012",
+      "type": "buyer",
+      "label": "BUY-012"
+    },
+    {
+      "id": "BUY-013",
+      "type": "buyer",
+      "label": "BUY-013"
+    },
+    {
+      "id": "BUY-014",
+      "type": "buyer",
+      "label": "BUY-014"
+    },
+    {
+      "id": "BUY-015",
+      "type": "buyer",
+      "label": "BUY-015"
+    },
+    {
+      "id": "BUY-016",
+      "type": "buyer",
+      "label": "BUY-016"
+    },
+    {
+      "id": "BUY-017",
+      "type": "buyer",
+      "label": "BUY-017"
+    },
+    {
+      "id": "BUY-018",
+      "type": "buyer",
+      "label": "BUY-018"
+    },
+    {
+      "id": "BUY-019",
+      "type": "buyer",
+      "label": "BUY-019"
+    },
+    {
+      "id": "BUY-020",
+      "type": "buyer",
+      "label": "BUY-020"
+    },
+    {
+      "id": "LND-01",
+      "type": "lender",
+      "label": "LND-01"
+    },
+    {
+      "id": "LND-02",
+      "type": "lender",
+      "label": "LND-02"
+    },
+    {
+      "id": "LND-03",
+      "type": "lender",
+      "label": "LND-03"
+    },
+    {
+      "id": "LND-04",
+      "type": "lender",
+      "label": "LND-04"
+    },
+    {
+      "id": "LND-05",
+      "type": "lender",
+      "label": "LND-05"
+    },
+    {
+      "id": "LND-06",
+      "type": "lender",
+      "label": "LND-06"
+    },
+    {
+      "id": "LND-07",
+      "type": "lender",
+      "label": "LND-07"
+    },
+    {
+      "id": "LND-08",
+      "type": "lender",
+      "label": "LND-08"
+    },
+    {
+      "id": "LND-09",
+      "type": "lender",
+      "label": "LND-09"
+    },
+    {
+      "id": "LND-10",
+      "type": "lender",
+      "label": "LND-10"
+    }
+  ],
+  "edges": [
+    {
+      "source": "SUP-030",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00001",
+      "amount": 492856.47
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-030",
+      "type": "finances",
+      "invoice_id": "INV-00001",
+      "amount": 492856.47
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00002",
+      "amount": 126198.16
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-023",
+      "type": "finances",
+      "invoice_id": "INV-00002",
+      "amount": 126198.16
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00003",
+      "amount": 279391.11
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-042",
+      "type": "finances",
+      "invoice_id": "INV-00003",
+      "amount": 279391.11
+    },
+    {
+      "source": "SUP-048",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00004",
+      "amount": 25714.04
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-048",
+      "type": "finances",
+      "invoice_id": "INV-00004",
+      "amount": 25714.04
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00005",
+      "amount": 971040.27
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-033",
+      "type": "finances",
+      "invoice_id": "INV-00005",
+      "amount": 971040.27
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00006",
+      "amount": 146811.15
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-041",
+      "type": "finances",
+      "invoice_id": "INV-00006",
+      "amount": 146811.15
+    },
+    {
+      "source": "SUP-010",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00007",
+      "amount": 3155284.11
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-010",
+      "type": "finances",
+      "invoice_id": "INV-00007",
+      "amount": 3155284.11
+    },
+    {
+      "source": "SUP-003",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00008",
+      "amount": 2048117.33
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-003",
+      "type": "finances",
+      "invoice_id": "INV-00008",
+      "amount": 2048117.33
+    },
+    {
+      "source": "SUP-010",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00009",
+      "amount": 6218407.99
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00010",
+      "amount": 315305.55
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-01",
+      "type": "supplies",
+      "invoice_id": "INV-00011",
+      "amount": 5236644.35
+    },
+    {
+      "source": "SUP-005",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00012",
+      "amount": 16278218.61
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-005",
+      "type": "finances",
+      "invoice_id": "INV-00012",
+      "amount": 16278218.61
+    },
+    {
+      "source": "SUP-012",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00013",
+      "amount": 6672522.3
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-012",
+      "type": "finances",
+      "invoice_id": "INV-00013",
+      "amount": 6672522.3
+    },
+    {
+      "source": "SUP-008",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00014",
+      "amount": 4420285.61
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-008",
+      "type": "finances",
+      "invoice_id": "INV-00014",
+      "amount": 4420285.61
+    },
+    {
+      "source": "SUP-048",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00015",
+      "amount": 25327.2
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-048",
+      "type": "finances",
+      "invoice_id": "INV-00015",
+      "amount": 25327.2
+    },
+    {
+      "source": "SUP-047",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00016",
+      "amount": 385147.65
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-047",
+      "type": "finances",
+      "invoice_id": "INV-00016",
+      "amount": 385147.65
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00017",
+      "amount": 306472.19
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-043",
+      "type": "finances",
+      "invoice_id": "INV-00017",
+      "amount": 306472.19
+    },
+    {
+      "source": "SUP-038",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00018",
+      "amount": 130064.27
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-038",
+      "type": "finances",
+      "invoice_id": "INV-00018",
+      "amount": 130064.27
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00019",
+      "amount": 1013222.58
+    },
+    {
+      "source": "SUP-016",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00020",
+      "amount": 307318.82
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-016",
+      "type": "finances",
+      "invoice_id": "INV-00020",
+      "amount": 307318.82
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-02",
+      "type": "supplies",
+      "invoice_id": "INV-00021",
+      "amount": 9251461.94
+    },
+    {
+      "source": "SUP-034",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00022",
+      "amount": 590472.78
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-034",
+      "type": "finances",
+      "invoice_id": "INV-00022",
+      "amount": 590472.78
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00023",
+      "amount": 569987.6
+    },
+    {
+      "source": "SUP-048",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00024",
+      "amount": 38616.62
+    },
+    {
+      "source": "SUP-018",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00025",
+      "amount": 1290137.8
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-018",
+      "type": "finances",
+      "invoice_id": "INV-00025",
+      "amount": 1290137.8
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00026",
+      "amount": 298628.92
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-025",
+      "type": "finances",
+      "invoice_id": "INV-00026",
+      "amount": 298628.92
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00027",
+      "amount": 263333.07
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-025",
+      "type": "finances",
+      "invoice_id": "INV-00027",
+      "amount": 263333.07
+    },
+    {
+      "source": "SUP-035",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00028",
+      "amount": 307050.3
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-035",
+      "type": "finances",
+      "invoice_id": "INV-00028",
+      "amount": 307050.3
+    },
+    {
+      "source": "SUP-026",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00029",
+      "amount": 2775725.86
+    },
+    {
+      "source": "SUP-009",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00030",
+      "amount": 3954393.62
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-009",
+      "type": "finances",
+      "invoice_id": "INV-00030",
+      "amount": 3954393.62
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-03",
+      "type": "supplies",
+      "invoice_id": "INV-00031",
+      "amount": 5193832.87
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-043",
+      "type": "finances",
+      "invoice_id": "INV-00031",
+      "amount": 5193832.87
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00032",
+      "amount": 5999073.75
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00033",
+      "amount": 254119.33
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-043",
+      "type": "finances",
+      "invoice_id": "INV-00033",
+      "amount": 254119.33
+    },
+    {
+      "source": "SUP-020",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00034",
+      "amount": 704351.08
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-020",
+      "type": "finances",
+      "invoice_id": "INV-00034",
+      "amount": 704351.08
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00035",
+      "amount": 178895.87
+    },
+    {
+      "source": "SUP-035",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00036",
+      "amount": 783304.65
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-035",
+      "type": "finances",
+      "invoice_id": "INV-00036",
+      "amount": 783304.65
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00037",
+      "amount": 221823.43
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-041",
+      "type": "finances",
+      "invoice_id": "INV-00037",
+      "amount": 221823.43
+    },
+    {
+      "source": "SUP-031",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00038",
+      "amount": 2084863.57
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-031",
+      "type": "finances",
+      "invoice_id": "INV-00038",
+      "amount": 2084863.57
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00039",
+      "amount": 357219.75
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00039",
+      "amount": 357219.75
+    },
+    {
+      "source": "SUP-018",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00040",
+      "amount": 686599.46
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-018",
+      "type": "finances",
+      "invoice_id": "INV-00040",
+      "amount": 686599.46
+    },
+    {
+      "source": "SUP-016",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00041",
+      "amount": 1817966.77
+    },
+    {
+      "source": "SUP-034",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00042",
+      "amount": 718738.45
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-034",
+      "type": "finances",
+      "invoice_id": "INV-00042",
+      "amount": 718738.45
+    },
+    {
+      "source": "SUP-013",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00043",
+      "amount": 1090760.76
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00044",
+      "amount": 311400.68
+    },
+    {
+      "source": "SUP-009",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00045",
+      "amount": 2594068.69
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-009",
+      "type": "finances",
+      "invoice_id": "INV-00045",
+      "amount": 2594068.69
+    },
+    {
+      "source": "SUP-037",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00046",
+      "amount": 71301.99
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-037",
+      "type": "finances",
+      "invoice_id": "INV-00046",
+      "amount": 71301.99
+    },
+    {
+      "source": "SUP-026",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00047",
+      "amount": 1280800.03
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-026",
+      "type": "finances",
+      "invoice_id": "INV-00047",
+      "amount": 1280800.03
+    },
+    {
+      "source": "SUP-008",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00048",
+      "amount": 5528794.29
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-008",
+      "type": "finances",
+      "invoice_id": "INV-00048",
+      "amount": 5528794.29
+    },
+    {
+      "source": "SUP-020",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00049",
+      "amount": 713458.33
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-020",
+      "type": "finances",
+      "invoice_id": "INV-00049",
+      "amount": 713458.33
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00050",
+      "amount": 165648.33
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-041",
+      "type": "finances",
+      "invoice_id": "INV-00050",
+      "amount": 165648.33
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00051",
+      "amount": 515334.34
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-039",
+      "type": "finances",
+      "invoice_id": "INV-00051",
+      "amount": 515334.34
+    },
+    {
+      "source": "SUP-017",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00052",
+      "amount": 3333536.9
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-017",
+      "type": "finances",
+      "invoice_id": "INV-00052",
+      "amount": 3333536.9
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00053",
+      "amount": 513940.45
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-039",
+      "type": "finances",
+      "invoice_id": "INV-00053",
+      "amount": 513940.45
+    },
+    {
+      "source": "SUP-029",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00054",
+      "amount": 284122.73
+    },
+    {
+      "source": "SUP-038",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00055",
+      "amount": 131066.25
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-038",
+      "type": "finances",
+      "invoice_id": "INV-00055",
+      "amount": 131066.25
+    },
+    {
+      "source": "SUP-038",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00056",
+      "amount": 105610.25
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-038",
+      "type": "finances",
+      "invoice_id": "INV-00056",
+      "amount": 105610.25
+    },
+    {
+      "source": "SUP-027",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00057",
+      "amount": 528461.55
+    },
+    {
+      "source": "SUP-050",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00058",
+      "amount": 152935.31
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-050",
+      "type": "finances",
+      "invoice_id": "INV-00058",
+      "amount": 152935.31
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00059",
+      "amount": 2762973.63
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00059",
+      "amount": 2762973.63
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00060",
+      "amount": 254118.23
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-039",
+      "type": "finances",
+      "invoice_id": "INV-00060",
+      "amount": 254118.23
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00061",
+      "amount": 259157.85
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-042",
+      "type": "finances",
+      "invoice_id": "INV-00061",
+      "amount": 259157.85
+    },
+    {
+      "source": "SUP-036",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00062",
+      "amount": 228496.68
+    },
+    {
+      "source": "SUP-027",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00063",
+      "amount": 441971.73
+    },
+    {
+      "source": "SUP-035",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00064",
+      "amount": 554489.77
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-035",
+      "type": "finances",
+      "invoice_id": "INV-00064",
+      "amount": 554489.77
+    },
+    {
+      "source": "SUP-016",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00065",
+      "amount": 362079.82
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00066",
+      "amount": 453034.43
+    },
+    {
+      "source": "SUP-007",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00067",
+      "amount": 7532762.48
+    },
+    {
+      "source": "SUP-017",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00068",
+      "amount": 920071.26
+    },
+    {
+      "source": "SUP-032",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00069",
+      "amount": 766174.22
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-032",
+      "type": "finances",
+      "invoice_id": "INV-00069",
+      "amount": 766174.22
+    },
+    {
+      "source": "SUP-007",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00070",
+      "amount": 30148975.59
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-007",
+      "type": "finances",
+      "invoice_id": "INV-00070",
+      "amount": 30148975.59
+    },
+    {
+      "source": "SUP-027",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00071",
+      "amount": 2719013.36
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-027",
+      "type": "finances",
+      "invoice_id": "INV-00071",
+      "amount": 2719013.36
+    },
+    {
+      "source": "SUP-041",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00072",
+      "amount": 226878.52
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-041",
+      "type": "finances",
+      "invoice_id": "INV-00072",
+      "amount": 226878.52
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00073",
+      "amount": 97032.72
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-023",
+      "type": "finances",
+      "invoice_id": "INV-00073",
+      "amount": 97032.72
+    },
+    {
+      "source": "SUP-016",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00074",
+      "amount": 230981.74
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-016",
+      "type": "finances",
+      "invoice_id": "INV-00074",
+      "amount": 230981.74
+    },
+    {
+      "source": "SUP-044",
+      "target": "BUY-002",
+      "type": "supplies",
+      "invoice_id": "INV-00075",
+      "amount": 248550.2
+    },
+    {
+      "source": "SUP-017",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00076",
+      "amount": 960974.64
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-017",
+      "type": "finances",
+      "invoice_id": "INV-00076",
+      "amount": 960974.64
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00077",
+      "amount": 2238411.76
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00077",
+      "amount": 2238411.76
+    },
+    {
+      "source": "SUP-011",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00078",
+      "amount": 3294356.36
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00079",
+      "amount": 11949870.32
+    },
+    {
+      "source": "SUP-044",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00080",
+      "amount": 100231.8
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-044",
+      "type": "finances",
+      "invoice_id": "INV-00080",
+      "amount": 100231.8
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00081",
+      "amount": 6286897.32
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-015",
+      "type": "finances",
+      "invoice_id": "INV-00081",
+      "amount": 6286897.32
+    },
+    {
+      "source": "SUP-008",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00082",
+      "amount": 5072830.83
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-008",
+      "type": "finances",
+      "invoice_id": "INV-00082",
+      "amount": 5072830.83
+    },
+    {
+      "source": "SUP-047",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00083",
+      "amount": 2475603.49
+    },
+    {
+      "source": "SUP-024",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00084",
+      "amount": 2343676.77
+    },
+    {
+      "source": "SUP-006",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00085",
+      "amount": 3585431.25
+    },
+    {
+      "source": "SUP-036",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00086",
+      "amount": 232009.42
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-036",
+      "type": "finances",
+      "invoice_id": "INV-00086",
+      "amount": 232009.42
+    },
+    {
+      "source": "SUP-009",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00087",
+      "amount": 2132567.12
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-009",
+      "type": "finances",
+      "invoice_id": "INV-00087",
+      "amount": 2132567.12
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00088",
+      "amount": 933475.74
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00088",
+      "amount": 933475.74
+    },
+    {
+      "source": "SUP-024",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00089",
+      "amount": 870868.37
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-024",
+      "type": "finances",
+      "invoice_id": "INV-00089",
+      "amount": 870868.37
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00090",
+      "amount": 118045.44
+    },
+    {
+      "source": "SUP-006",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00091",
+      "amount": 3023750.34
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-006",
+      "type": "finances",
+      "invoice_id": "INV-00091",
+      "amount": 3023750.34
+    },
+    {
+      "source": "SUP-034",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00092",
+      "amount": 1120439.32
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-034",
+      "type": "finances",
+      "invoice_id": "INV-00092",
+      "amount": 1120439.32
+    },
+    {
+      "source": "SUP-036",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00093",
+      "amount": 219897.85
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00094",
+      "amount": 2164627.25
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00094",
+      "amount": 2164627.25
+    },
+    {
+      "source": "SUP-006",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00095",
+      "amount": 3026815.96
+    },
+    {
+      "source": "SUP-008",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00096",
+      "amount": 4769124.27
+    },
+    {
+      "source": "SUP-014",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00097",
+      "amount": 6810524.57
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00098",
+      "amount": 6097907.37
+    },
+    {
+      "source": "SUP-022",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00099",
+      "amount": 1049887.47
+    },
+    {
+      "source": "SUP-006",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00100",
+      "amount": 2423907.25
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-006",
+      "type": "finances",
+      "invoice_id": "INV-00100",
+      "amount": 2423907.25
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00101",
+      "amount": 502903.28
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-039",
+      "type": "finances",
+      "invoice_id": "INV-00101",
+      "amount": 502903.28
+    },
+    {
+      "source": "SUP-032",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00102",
+      "amount": 455722.71
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-032",
+      "type": "finances",
+      "invoice_id": "INV-00102",
+      "amount": 455722.71
+    },
+    {
+      "source": "SUP-038",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00103",
+      "amount": 71359.93
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-038",
+      "type": "finances",
+      "invoice_id": "INV-00103",
+      "amount": 71359.93
+    },
+    {
+      "source": "SUP-050",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00104",
+      "amount": 208828.91
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-050",
+      "type": "finances",
+      "invoice_id": "INV-00104",
+      "amount": 208828.91
+    },
+    {
+      "source": "SUP-046",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00105",
+      "amount": 481637.43
+    },
+    {
+      "source": "SUP-030",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00106",
+      "amount": 980227.98
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-030",
+      "type": "finances",
+      "invoice_id": "INV-00106",
+      "amount": 980227.98
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00107",
+      "amount": 1423339.57
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00107",
+      "amount": 1423339.57
+    },
+    {
+      "source": "SUP-020",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00108",
+      "amount": 553731.74
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00109",
+      "amount": 81473.23
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-023",
+      "type": "finances",
+      "invoice_id": "INV-00109",
+      "amount": 81473.23
+    },
+    {
+      "source": "SUP-005",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00110",
+      "amount": 13358986.11
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00111",
+      "amount": 1221240.52
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00111",
+      "amount": 1221240.52
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00112",
+      "amount": 1664946.55
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-033",
+      "type": "finances",
+      "invoice_id": "INV-00112",
+      "amount": 1664946.55
+    },
+    {
+      "source": "SUP-040",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00113",
+      "amount": 219020.2
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-040",
+      "type": "finances",
+      "invoice_id": "INV-00113",
+      "amount": 219020.2
+    },
+    {
+      "source": "SUP-037",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00114",
+      "amount": 90067.96
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-037",
+      "type": "finances",
+      "invoice_id": "INV-00114",
+      "amount": 90067.96
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00115",
+      "amount": 1278685.23
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00116",
+      "amount": 258043.45
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-025",
+      "type": "finances",
+      "invoice_id": "INV-00116",
+      "amount": 258043.45
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00117",
+      "amount": 334743.97
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00118",
+      "amount": 205606.54
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00119",
+      "amount": 185866.59
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-043",
+      "type": "finances",
+      "invoice_id": "INV-00119",
+      "amount": 185866.59
+    },
+    {
+      "source": "SUP-032",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00120",
+      "amount": 694562.78
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-032",
+      "type": "finances",
+      "invoice_id": "INV-00120",
+      "amount": 694562.78
+    },
+    {
+      "source": "SUP-034",
+      "target": "BUY-002",
+      "type": "supplies",
+      "invoice_id": "INV-00121",
+      "amount": 617424.3
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-034",
+      "type": "finances",
+      "invoice_id": "INV-00121",
+      "amount": 617424.3
+    },
+    {
+      "source": "SUP-011",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00122",
+      "amount": 5947459.78
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-011",
+      "type": "finances",
+      "invoice_id": "INV-00122",
+      "amount": 5947459.78
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00123",
+      "amount": 82721768.67
+    },
+    {
+      "source": "SUP-019",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00124",
+      "amount": 883529.41
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-019",
+      "type": "finances",
+      "invoice_id": "INV-00124",
+      "amount": 883529.41
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00125",
+      "amount": 197254.94
+    },
+    {
+      "source": "SUP-011",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00126",
+      "amount": 7745831.24
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-011",
+      "type": "finances",
+      "invoice_id": "INV-00126",
+      "amount": 7745831.24
+    },
+    {
+      "source": "SUP-002",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00127",
+      "amount": 5989193.28
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-002",
+      "type": "finances",
+      "invoice_id": "INV-00127",
+      "amount": 5989193.28
+    },
+    {
+      "source": "SUP-007",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00128",
+      "amount": 8682976.5
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-007",
+      "type": "finances",
+      "invoice_id": "INV-00128",
+      "amount": 8682976.5
+    },
+    {
+      "source": "SUP-040",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00129",
+      "amount": 254607.49
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-040",
+      "type": "finances",
+      "invoice_id": "INV-00129",
+      "amount": 254607.49
+    },
+    {
+      "source": "SUP-050",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00130",
+      "amount": 190732.44
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-050",
+      "type": "finances",
+      "invoice_id": "INV-00130",
+      "amount": 190732.44
+    },
+    {
+      "source": "SUP-032",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00131",
+      "amount": 657047.03
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-032",
+      "type": "finances",
+      "invoice_id": "INV-00131",
+      "amount": 657047.03
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00132",
+      "amount": 178389.07
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-023",
+      "type": "finances",
+      "invoice_id": "INV-00132",
+      "amount": 178389.07
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00133",
+      "amount": 1108818.6
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00134",
+      "amount": 153813.62
+    },
+    {
+      "source": "SUP-003",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00135",
+      "amount": 13325265.46
+    },
+    {
+      "source": "SUP-005",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00136",
+      "amount": 6129124.34
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-005",
+      "type": "finances",
+      "invoice_id": "INV-00136",
+      "amount": 6129124.34
+    },
+    {
+      "source": "SUP-031",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00137",
+      "amount": 1679566.07
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-031",
+      "type": "finances",
+      "invoice_id": "INV-00137",
+      "amount": 1679566.07
+    },
+    {
+      "source": "SUP-028",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00138",
+      "amount": 2406418.36
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-028",
+      "type": "finances",
+      "invoice_id": "INV-00138",
+      "amount": 2406418.36
+    },
+    {
+      "source": "SUP-018",
+      "target": "BUY-003",
+      "type": "supplies",
+      "invoice_id": "INV-00139",
+      "amount": 735138.79
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-018",
+      "type": "finances",
+      "invoice_id": "INV-00139",
+      "amount": 735138.79
+    },
+    {
+      "source": "SUP-019",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00140",
+      "amount": 1191901.56
+    },
+    {
+      "source": "SUP-040",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00141",
+      "amount": 152618.75
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-040",
+      "type": "finances",
+      "invoice_id": "INV-00141",
+      "amount": 152618.75
+    },
+    {
+      "source": "SUP-002",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00142",
+      "amount": 4589150.52
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-002",
+      "type": "finances",
+      "invoice_id": "INV-00142",
+      "amount": 4589150.52
+    },
+    {
+      "source": "SUP-003",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00143",
+      "amount": 2440782.55
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00144",
+      "amount": 1548181.53
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00144",
+      "amount": 1548181.53
+    },
+    {
+      "source": "SUP-050",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00145",
+      "amount": 237208.02
+    },
+    {
+      "source": "SUP-005",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00146",
+      "amount": 16813620.64
+    },
+    {
+      "source": "SUP-036",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00147",
+      "amount": 236447.97
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00148",
+      "amount": 9924635.02
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-015",
+      "type": "finances",
+      "invoice_id": "INV-00148",
+      "amount": 9924635.02
+    },
+    {
+      "source": "SUP-009",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00149",
+      "amount": 3772541.07
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-009",
+      "type": "finances",
+      "invoice_id": "INV-00149",
+      "amount": 3772541.07
+    },
+    {
+      "source": "SUP-009",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00150",
+      "amount": 2602581.05
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-009",
+      "type": "finances",
+      "invoice_id": "INV-00150",
+      "amount": 2602581.05
+    },
+    {
+      "source": "SUP-012",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00151",
+      "amount": 3389968.45
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00152",
+      "amount": 1059205.87
+    },
+    {
+      "source": "SUP-020",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00153",
+      "amount": 704417.73
+    },
+    {
+      "source": "LND-02",
+      "target": "SUP-020",
+      "type": "finances",
+      "invoice_id": "INV-00153",
+      "amount": 704417.73
+    },
+    {
+      "source": "SUP-047",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00154",
+      "amount": 175477.66
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-047",
+      "type": "finances",
+      "invoice_id": "INV-00154",
+      "amount": 175477.66
+    },
+    {
+      "source": "SUP-042",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00155",
+      "amount": 218856.79
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-042",
+      "type": "finances",
+      "invoice_id": "INV-00155",
+      "amount": 218856.79
+    },
+    {
+      "source": "SUP-031",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00156",
+      "amount": 956355.1
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-031",
+      "type": "finances",
+      "invoice_id": "INV-00156",
+      "amount": 956355.1
+    },
+    {
+      "source": "SUP-022",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00157",
+      "amount": 1734329.75
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00158",
+      "amount": 225180.64
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00158",
+      "amount": 225180.64
+    },
+    {
+      "source": "SUP-004",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00159",
+      "amount": 5796572.44
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-004",
+      "type": "finances",
+      "invoice_id": "INV-00159",
+      "amount": 5796572.44
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00160",
+      "amount": 189245.02
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00160",
+      "amount": 189245.02
+    },
+    {
+      "source": "SUP-014",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00161",
+      "amount": 8912964.76
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-014",
+      "type": "finances",
+      "invoice_id": "INV-00161",
+      "amount": 8912964.76
+    },
+    {
+      "source": "SUP-007",
+      "target": "BUY-014",
+      "type": "supplies",
+      "invoice_id": "INV-00162",
+      "amount": 21044926.81
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00163",
+      "amount": 343494.43
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-025",
+      "type": "finances",
+      "invoice_id": "INV-00163",
+      "amount": 343494.43
+    },
+    {
+      "source": "SUP-024",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00164",
+      "amount": 709668.92
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-024",
+      "type": "finances",
+      "invoice_id": "INV-00164",
+      "amount": 709668.92
+    },
+    {
+      "source": "SUP-022",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00165",
+      "amount": 965015.62
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-022",
+      "type": "finances",
+      "invoice_id": "INV-00165",
+      "amount": 965015.62
+    },
+    {
+      "source": "SUP-048",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00166",
+      "amount": 36875.45
+    },
+    {
+      "source": "SUP-024",
+      "target": "BUY-011",
+      "type": "supplies",
+      "invoice_id": "INV-00167",
+      "amount": 373716.0
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-024",
+      "type": "finances",
+      "invoice_id": "INV-00167",
+      "amount": 373716.0
+    },
+    {
+      "source": "SUP-050",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00168",
+      "amount": 189070.12
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-050",
+      "type": "finances",
+      "invoice_id": "INV-00168",
+      "amount": 189070.12
+    },
+    {
+      "source": "SUP-010",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00169",
+      "amount": 2609620.72
+    },
+    {
+      "source": "SUP-045",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00170",
+      "amount": 254458.41
+    },
+    {
+      "source": "SUP-014",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00171",
+      "amount": 6187660.4
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-014",
+      "type": "finances",
+      "invoice_id": "INV-00171",
+      "amount": 6187660.4
+    },
+    {
+      "source": "SUP-044",
+      "target": "BUY-009",
+      "type": "supplies",
+      "invoice_id": "INV-00172",
+      "amount": 152440.48
+    },
+    {
+      "source": "SUP-014",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00173",
+      "amount": 4009682.2
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-014",
+      "type": "finances",
+      "invoice_id": "INV-00173",
+      "amount": 4009682.2
+    },
+    {
+      "source": "SUP-023",
+      "target": "BUY-005",
+      "type": "supplies",
+      "invoice_id": "INV-00174",
+      "amount": 172262.56
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-023",
+      "type": "finances",
+      "invoice_id": "INV-00174",
+      "amount": 172262.56
+    },
+    {
+      "source": "SUP-014",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00175",
+      "amount": 4108969.96
+    },
+    {
+      "source": "SUP-043",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00176",
+      "amount": 279732.58
+    },
+    {
+      "source": "LND-04",
+      "target": "SUP-043",
+      "type": "finances",
+      "invoice_id": "INV-00176",
+      "amount": 279732.58
+    },
+    {
+      "source": "SUP-001",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00177",
+      "amount": 10442101.61
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-001",
+      "type": "finances",
+      "invoice_id": "INV-00177",
+      "amount": 10442101.61
+    },
+    {
+      "source": "SUP-019",
+      "target": "BUY-002",
+      "type": "supplies",
+      "invoice_id": "INV-00178",
+      "amount": 1794934.13
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-019",
+      "type": "finances",
+      "invoice_id": "INV-00178",
+      "amount": 1794934.13
+    },
+    {
+      "source": "SUP-003",
+      "target": "BUY-013",
+      "type": "supplies",
+      "invoice_id": "INV-00179",
+      "amount": 1038598.84
+    },
+    {
+      "source": "SUP-022",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00180",
+      "amount": 1170435.86
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-022",
+      "type": "finances",
+      "invoice_id": "INV-00180",
+      "amount": 1170435.86
+    },
+    {
+      "source": "SUP-022",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00181",
+      "amount": 975675.91
+    },
+    {
+      "source": "SUP-013",
+      "target": "BUY-006",
+      "type": "supplies",
+      "invoice_id": "INV-00182",
+      "amount": 1844255.73
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-013",
+      "type": "finances",
+      "invoice_id": "INV-00182",
+      "amount": 1844255.73
+    },
+    {
+      "source": "SUP-021",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00183",
+      "amount": 1166742.29
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-021",
+      "type": "finances",
+      "invoice_id": "INV-00183",
+      "amount": 1166742.29
+    },
+    {
+      "source": "SUP-037",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00184",
+      "amount": 58580.64
+    },
+    {
+      "source": "LND-06",
+      "target": "SUP-037",
+      "type": "finances",
+      "invoice_id": "INV-00184",
+      "amount": 58580.64
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00185",
+      "amount": 1822057.17
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-033",
+      "type": "finances",
+      "invoice_id": "INV-00185",
+      "amount": 1822057.17
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-012",
+      "type": "supplies",
+      "invoice_id": "INV-00186",
+      "amount": 498673.36
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-020",
+      "type": "supplies",
+      "invoice_id": "INV-00187",
+      "amount": 209113.18
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00187",
+      "amount": 209113.18
+    },
+    {
+      "source": "SUP-033",
+      "target": "BUY-007",
+      "type": "supplies",
+      "invoice_id": "INV-00188",
+      "amount": 770450.77
+    },
+    {
+      "source": "LND-03",
+      "target": "SUP-033",
+      "type": "finances",
+      "invoice_id": "INV-00188",
+      "amount": 770450.77
+    },
+    {
+      "source": "SUP-006",
+      "target": "BUY-017",
+      "type": "supplies",
+      "invoice_id": "INV-00189",
+      "amount": 2665573.84
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-006",
+      "type": "finances",
+      "invoice_id": "INV-00189",
+      "amount": 2665573.84
+    },
+    {
+      "source": "SUP-020",
+      "target": "BUY-001",
+      "type": "supplies",
+      "invoice_id": "INV-00190",
+      "amount": 280001.53
+    },
+    {
+      "source": "SUP-035",
+      "target": "BUY-002",
+      "type": "supplies",
+      "invoice_id": "INV-00191",
+      "amount": 3972812.51
+    },
+    {
+      "source": "LND-08",
+      "target": "SUP-035",
+      "type": "finances",
+      "invoice_id": "INV-00191",
+      "amount": 3972812.51
+    },
+    {
+      "source": "SUP-025",
+      "target": "BUY-015",
+      "type": "supplies",
+      "invoice_id": "INV-00192",
+      "amount": 321314.12
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-025",
+      "type": "finances",
+      "invoice_id": "INV-00192",
+      "amount": 321314.12
+    },
+    {
+      "source": "SUP-012",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00193",
+      "amount": 2734483.98
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-012",
+      "type": "finances",
+      "invoice_id": "INV-00193",
+      "amount": 2734483.98
+    },
+    {
+      "source": "SUP-044",
+      "target": "BUY-018",
+      "type": "supplies",
+      "invoice_id": "INV-00194",
+      "amount": 183391.77
+    },
+    {
+      "source": "LND-09",
+      "target": "SUP-044",
+      "type": "finances",
+      "invoice_id": "INV-00194",
+      "amount": 183391.77
+    },
+    {
+      "source": "SUP-049",
+      "target": "BUY-004",
+      "type": "supplies",
+      "invoice_id": "INV-00195",
+      "amount": 255406.12
+    },
+    {
+      "source": "LND-07",
+      "target": "SUP-049",
+      "type": "finances",
+      "invoice_id": "INV-00195",
+      "amount": 255406.12
+    },
+    {
+      "source": "SUP-039",
+      "target": "BUY-002",
+      "type": "supplies",
+      "invoice_id": "INV-00196",
+      "amount": 307262.91
+    },
+    {
+      "source": "LND-01",
+      "target": "SUP-039",
+      "type": "finances",
+      "invoice_id": "INV-00196",
+      "amount": 307262.91
+    },
+    {
+      "source": "SUP-015",
+      "target": "BUY-019",
+      "type": "supplies",
+      "invoice_id": "INV-00197",
+      "amount": 9460837.06
+    },
+    {
+      "source": "LND-10",
+      "target": "SUP-015",
+      "type": "finances",
+      "invoice_id": "INV-00197",
+      "amount": 9460837.06
+    },
+    {
+      "source": "SUP-034",
+      "target": "BUY-008",
+      "type": "supplies",
+      "invoice_id": "INV-00198",
+      "amount": 1017779.76
+    },
+    {
+      "source": "LND-05",
+      "target": "SUP-034",
+      "type": "finances",
+      "invoice_id": "INV-00198",
+      "amount": 1017779.76
+    },
+    {
+      "source": "SUP-036",
+      "target": "BUY-016",
+      "type": "supplies",
+      "invoice_id": "INV-00199",
+      "amount": 213004.05
+    },
+    {
+      "source": "SUP-010",
+      "target": "BUY-010",
+      "type": "supplies",
+      "invoice_id": "INV-00200",
+      "amount": 6785535.75
+    }
+  ]
+}
