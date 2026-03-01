@@ -1,0 +1,32 @@
+{
+  "name": "fraud_detect",
+  "version": "1.0.0",
+  "description": "**Institutional-Grade Real-Time SCF Risk Intelligence & Pre-Disbursement Decision Engine**",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "node backend/server.js",
+    "frontend": "serve . -p 3001"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hariprasad-1809/fraud_detect.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Hariprasad-1809/fraud_detect/issues"
+  },
+  "homepage": "https://github.com/Hariprasad-1809/fraud_detect#readme",
+  "dependencies": {
+    "@faker-js/faker": "^10.3.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "serve": "^14.2.5"
+  }
+}
