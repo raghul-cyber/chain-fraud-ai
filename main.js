@@ -39,48 +39,40 @@ const AppState = {
 // ─────────────────────────────────────────────
 
 async function loadDatasets() {
+  const API_BASE = 'http://localhost:3000/api';
+
   setLoadStep(1, 'active');
-  await loadCSV('data/invoice_data.csv', d => {
-    AppState.invoices = d;
-    setLoadStep(1, 'done');
-    setLoadStep(2, 'active');
-  });
-
-  await loadCSV('data/supplier_profile.csv', d => {
-    AppState.suppliers = d;
-    setLoadStep(2, 'done');
-    setLoadStep(3, 'active');
-  });
-
-  await loadCSV('data/payment_data.csv', d => {
-    AppState.payments = d;
-    setLoadStep(3, 'done');
-    setLoadStep(4, 'active');
-  });
-
-  await loadJSON('data/transaction_graph.json', d => {
-    AppState.graph = d;
-    setLoadStep(4, 'done');
-    setLoadStep(5, 'active');
-  });
-}
-
-function loadCSV(path, callback) {
-  return new Promise((resolve, reject) => {
-    Papa.parse(path, {
-      download: true, header: true, skipEmptyLines: true,
-      dynamicTyping: true,
-      complete: result => { callback(result.data); resolve(); },
-      error: err => { console.error('CSV load error:', path, err); resolve(); }
-    });
-  });
-}
-
-function loadJSON(path, callback) {
-  return fetch(path)
+  await fetch(`${API_BASE}/invoices`)
     .then(r => r.json())
-    .then(d => { callback(d); })
-    .catch(err => { console.warn('JSON load error:', path, err); });
+    .then(d => {
+      AppState.invoices = d;
+      setLoadStep(1, 'done');
+      setLoadStep(2, 'active');
+    }).catch(err => console.error('Failed to load invoices:', err));
+
+  await fetch(`${API_BASE}/suppliers`)
+    .then(r => r.json())
+    .then(d => {
+      AppState.suppliers = d;
+      setLoadStep(2, 'done');
+      setLoadStep(3, 'active');
+    }).catch(err => console.error('Failed to load suppliers:', err));
+
+  await fetch(`${API_BASE}/payments`)
+    .then(r => r.json())
+    .then(d => {
+      AppState.payments = d;
+      setLoadStep(3, 'done');
+      setLoadStep(4, 'active');
+    }).catch(err => console.error('Failed to load payments:', err));
+
+  await fetch(`${API_BASE}/graph`)
+    .then(r => r.json())
+    .then(d => {
+      AppState.graph = d;
+      setLoadStep(4, 'done');
+      setLoadStep(5, 'active');
+    }).catch(err => console.error('Failed to load graph:', err));
 }
 
 function setLoadStep(step, state) {
@@ -150,7 +142,7 @@ async function initApp() {
     const count = AppState.graph?.nodes?.length ?? 0;
     const nodeCountEl = document.getElementById("graphNodeCount");
     if (nodeCountEl) {
-        nodeCountEl.textContent = count.toLocaleString();
+      nodeCountEl.textContent = count.toLocaleString();
     }
   }
   updateGraphNodeCount();
@@ -845,7 +837,7 @@ function refreshGraphSize() {
 // ─────────────────────────────────────────────
 
 function runSimulation() {
-  
+
   const amt = parseFloat(amtEl.value) || 1000000;
 
   const freq = parseFloat(document.getElementById('sim-freq')?.value || 5);
@@ -866,32 +858,32 @@ function runSimulation() {
   let result;
 
   if (
-  AppState.fraudEngine &&
-  typeof AppState.fraudEngine.simulateRiskScore === "function"
+    AppState.fraudEngine &&
+    typeof AppState.fraudEngine.simulateRiskScore === "function"
   ) {
-  result = AppState.fraudEngine.simulateRiskScore({
-    invoice_amount: amt,
-    units_supplied: units,
-    invoice_frequency: freq,
-    historical_avg_frequency: hist,
-    historical_avg_amount: amt * 0.6,
-    annual_revenue: rev,
-    monthly_capacity: cap,
-    actual_payment_ratio: payRatio
-  });
+    result = AppState.fraudEngine.simulateRiskScore({
+      invoice_amount: amt,
+      units_supplied: units,
+      invoice_frequency: freq,
+      historical_avg_frequency: hist,
+      historical_avg_amount: amt * 0.6,
+      annual_revenue: rev,
+      monthly_capacity: cap,
+      actual_payment_ratio: payRatio
+    });
   } else {
-  console.warn("Simulation engine not available.");
-  result = {
-    risk_score: 30,
-    anomaly_score: 0.3,
-    fai: 1.2,
-    feasibility_score: 0.9,
-    revenue_ratio: 0.5,
-    dilution_risk: 0,
-    freq_deviation: 0,
-    decision: 'APPROVE',
-    decision_class: 'approved'
-  };
+    console.warn("Simulation engine not available.");
+    result = {
+      risk_score: 30,
+      anomaly_score: 0.3,
+      fai: 1.2,
+      feasibility_score: 0.9,
+      revenue_ratio: 0.5,
+      dilution_risk: 0,
+      freq_deviation: 0,
+      decision: 'APPROVE',
+      decision_class: 'approved'
+    };
   }
   // Update ring
   const circumference = 314;
@@ -1166,9 +1158,9 @@ function renderCompRow(icon, name, weight, score) {
           Please open this file via a local server (e.g. VS Code Live Server) — the browser cannot load CSV files directly from the filesystem.
         </div>
         <code style="font-size:11px;background:rgba(255,255,255,0.05);padding:8px 16px;border-radius:8px;color:var(--cyan)">
-          npx serve . -p 5500
+          npm start
         </code>
-        <div style="font-size:12px;color:var(--text-3)">Then open: <a href="http://localhost:5500" style="color:var(--primary)">http://localhost:5500</a></div>
+        <div style="font-size:12px;color:var(--text-3)">Then open: <a href="http://localhost:3001" style="color:var(--primary)">http://localhost:3001</a></div>
       </div>
     `;
   }
